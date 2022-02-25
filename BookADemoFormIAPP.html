@@ -2,6 +2,16 @@
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
 <!--  ----------------------------------------------------------------------  -->
 
+<script>
+    let privacyConsentChecked = false;
+
+    function onClickCheckbox() {
+        privacyConsentChecked = !privacyConsentChecked;
+        alert('onClickCheckbox privacyConsentChecked : ' + privacyConsentChecked);
+    }
+
+</script>
+
 <form action='https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8' method='POST'>
 
     <input type='hidden' name='oid' value='00D5e000001CmE7'>
@@ -283,6 +293,15 @@
 
     <input id='Campaign_ID' name='Campaign_ID' value='7015e000000Mfyl' type='hidden' /><br>
 
-    <input type='submit' name='submit' class='download-button w-button'>
+    <label id="Consent-whitepaper" class="w-checkbox checkbox">
+        <input type="checkbox" id="Personal-Consent" name="Personal-Consent" data-name="Personal Consent" required="" class="w-checkbox-input"
+            onchange='onClickCheckbox()'
+        >
+        <span for="Personal Consent" class="paragraph small alpha-60 white-text check-text w-form-label">
+            By clicking submit, you consent to the processing of your Personal Data by Relyance AI in accordance with our <a href="/privacy-statement" target="_blank" class="plain-inline dark-inline">Privacy Statement</a>.*
+        </span>
+    </label>
+
+    <input type='submit' name='submit' class='download-button w-button'
 
 </form>
