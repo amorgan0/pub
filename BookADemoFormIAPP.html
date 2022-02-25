@@ -7,7 +7,11 @@
 
     function onClickCheckbox() {
         privacyConsentChecked = !privacyConsentChecked;
-        alert('onClickCheckbox privacyConsentChecked : ' + privacyConsentChecked);
+
+        const submitButton = document.getElementById('book-a-demo-iapp-submit-button');
+        if (submitButton) {
+            submitButton.setAttribute("disabled", !privacyConsentChecked);
+        }
     }
 
 </script>
@@ -302,6 +306,6 @@
         </span>
     </label>
 
-    <input type='submit' name='submit' class='download-button w-button'>
+    <input id='book-a-demo-iapp-submit-button' type='submit' name='submit' class='download-button w-button'>
 
 </form>
