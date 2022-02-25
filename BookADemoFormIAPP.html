@@ -13,7 +13,7 @@
             submitButton.disabled = !privacyConsentChecked
             if (privacyConsentChecked) {
                 submitButton.style.cursor = 'pointer'
-                submitButton.style.backgroundColor = undefined;
+                submitButton.style.backgroundColor = '#3898ec';
             } else {
                 submitButton.style.cursor = 'default'
                 submitButton.style.backgroundColor = '#DBDBDB'
@@ -313,6 +313,8 @@
         </span>
     </label>
 
-    <input id='book-a-demo-iapp-submit-button' type='submit' name='submit' class='download-button w-button'>
+    <input id='book-a-demo-iapp-submit-button' type='submit' name='submit' class='download-button w-button'
+        style='cursor: default; background-color: #DBDBDB'
+    >
 
 </form>
