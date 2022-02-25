@@ -11,6 +11,13 @@
         const submitButton = document.getElementById('book-a-demo-iapp-submit-button');
         if (submitButton) {
             submitButton.disabled = !privacyConsentChecked
+            if (privacyConsentChecked) {
+                submitButton.style.cursor = 'pointer'
+                submitButton.style.backgroundColor = undefined;
+            } else {
+                submitButton.style.cursor = 'default'
+                submitButton.style.backgroundColor = '#DBDBDB'
+            }
         }
     }
 
